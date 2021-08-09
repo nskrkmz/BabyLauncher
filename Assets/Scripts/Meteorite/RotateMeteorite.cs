@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class RotateMeteorite : MonoBehaviour
 {
+    private void Start()
+    {
+        Debug.Log("Rotmet.cs");
+    }
     void Update()
     {
-        if (FindObjectOfType<RunControll>().isRun)
+        if (FindObjectOfType<GameManager>().run)
         {
             transform.Rotate(Vector3.right, Space.World);
         }

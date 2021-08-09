@@ -8,9 +8,12 @@ public class EarthController : MonoBehaviour
     public float x;
     public float y;
     public bool isRun = false;
-    
-    //Vector2 earthMove =new Vector2();
 
+    //Vector2 earthMove =new Vector2();
+    private void Start()
+    {
+        Debug.Log("earthcontroller.cs");
+    }
 
     private void Update()
     {

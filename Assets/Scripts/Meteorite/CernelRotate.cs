@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class CernelRotate : MonoBehaviour
 {
+    private void Start()
+    {
+        Debug.Log("cerrot.cs");
+    }
     void Update()
     {
-        if (FindObjectOfType<RunControll>().isRun)
+        if (FindObjectOfType<GameManager>().run)
         {
             transform.Rotate(Vector3.left / 3, Space.World);
         }

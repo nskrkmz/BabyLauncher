@@ -13,6 +13,7 @@ public class Voice : MonoBehaviour
     
     public void OnButtonClick()
     {
+        Debug.Log("Voice.cs");
         if (btn.image.sprite == onSprite)
         {
             btn.image.sprite = offSprite;

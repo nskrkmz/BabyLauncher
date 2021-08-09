@@ -17,7 +17,7 @@ public class BabyFire : MonoBehaviour
 
     private float deltaTime;
     private float fps;
-    private bool isAlive;
+    public bool isAlive;
     public int shoutCount;
     private bool fireControll;
 
@@ -29,12 +29,10 @@ public class BabyFire : MonoBehaviour
 
     void Start()
     {
-        
+        Debug.Log("BabyFire.cs");
         shoutCount = 0;
         BabyInstantiate(numberOfBaby);
     }
-
-
 
     private void Update()
     {
@@ -55,7 +53,6 @@ public class BabyFire : MonoBehaviour
         
         numberOfBaby = levelInformations.NumberOfBaby;
         flyTime= levelInformations.FlyTime;
-        Debug.Log(numberOfBaby);
     }
 
 
