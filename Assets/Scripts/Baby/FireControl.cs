@@ -16,12 +16,13 @@ public class FireControl : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log("FireControl.cs");
         isRun = true;
     }
 
     private void Update()
     {
-        if (isRun)
+        if (FindObjectOfType<GameManager>().run)
         {
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {

@@ -10,22 +10,22 @@ public class RunControll : MonoBehaviour
     public Sprite runSprite;
     public Sprite stopSprite;
 
-    private void Start()
-    {
-        isRun = true;
-    }
+    
 
     public void OnButtonClick()
     {
+        Debug.Log("RunControll.cs");
         if (btn.image.sprite == runSprite)
         {
-            FindObjectOfType<FireControl>().isRun = false;
+            FindObjectOfType<GameManager>().run = false;
+            FindObjectOfType<FireControl>().isRun = FindObjectOfType<GameManager>().run;
             btn.image.sprite = stopSprite;
             isRun = false;
         }
         else
         {
-            FindObjectOfType<FireControl>().isRun = true;
+            FindObjectOfType<GameManager>().run = true;
+            FindObjectOfType<FireControl>().isRun = FindObjectOfType<GameManager>().run;
             btn.image.sprite = runSprite;
             isRun = true;
         }
